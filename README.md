@@ -36,6 +36,7 @@ To determine who's on duty (scheduled worker/coverage/no one), a new row `"On Du
 ![image](https://github.com/user-attachments/assets/11bc6ff2-441d-4ccd-9eda-a86e13dd7332)
 
 `"Index"` and `"Match"` are used to create the summary of the rotation by matching the DATE, SHIFT and ROLE.
+
 Example of code:
 ```
 =INDEX("On Duty" row,MATCH(1,(DATE ='DATE' from 'Transform Sheet')*(SHIFT = 'SHIFT' from 'Transform Sheet')*(ROLE = 'ROLE' from 'Transform Sheet'),0))
