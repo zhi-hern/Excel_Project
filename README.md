@@ -32,7 +32,9 @@ As for 31/12/2024 and 1/1/2025, Yusof will be covering the 1st half of D2 shift 
 A "Transform sheet" is created to query the "Rotation" table by using `'HLOOKUP'` function and determine who's on shift using `'IF'` and `'Nested IFs'` statements.
 
 To determine who's on duty (scheduled worker/coverage/no one), a new row `"On Duty"` "is created using `"Nested IFs"`based on the hierachy as shown below:
-![image|100](https://github.com/user-attachments/assets/99600270-e87a-4f74-a67a-3884842a62b4)|
 
-After
+![image](https://github.com/user-attachments/assets/11bc6ff2-441d-4ccd-9eda-a86e13dd7332)
+
+`"Index"` and `"Match"` are used to create the summary of the rotation by matching the DATE, SHIFT and ROLE.
+```=INDEX('Transform Sheet'!$B$4:$DHY$4,MATCH(1,(Summary!C$5='Transform Sheet'!$B$3:$DHY$3)*(Summary!$A6='Transform Sheet'!$B$5:$DHY$5)*(Summary!$B6='Transform Sheet'!$B$6:$DHY$6),0)) ```
 
