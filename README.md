@@ -2,6 +2,7 @@
 This project showcases my proficiency in querying data using Excel.
 
 ## Manpower Tracker
+[[Manpower tracker.xlsx]](https://github.com/zhi-hern/Excel_Project/blob/main/Manpower%20tracker.xlsx)
 
 ## Project Description
 This project creates a summary for management to keep track of manpower. 
@@ -34,6 +35,8 @@ A "Transform sheet" is created to query the "Rotation" table by using `'HLOOKUP'
 To determine who's on duty (scheduled worker/coverage/no one), a new row `"On Duty"` "is created using `"Nested IFs"`based on the hierachy as shown below:
 
 ![image](https://github.com/user-attachments/assets/11bc6ff2-441d-4ccd-9eda-a86e13dd7332)
+
+A date sheet is created to display the dates based on week number. 
 
 `"Index"` and `"Match"` are used to create the summary of the rotation by matching the DATE, SHIFT and ROLE.
 
