@@ -30,18 +30,20 @@ From this, management can easily know that no one is working on **_2/1/2025 & 3/
 As for 31/12/2024 and 1/1/2025, Yusof will be covering the 1st half of D2 shift (continuing from his D1 shift) and Murphy will be covering the 2nd half of D2 shift (and continue working for his D3 shift).
 
 ### Task Performed:
-A "Transform sheet" is created to query the "Rotation" table by using `'HLOOKUP'` function and determine who's on shift using `'IF'` and `'Nested IFs'` statements.
+(i) Assign the original 'rotation' sheet as a `"input"` sheet where information is extracted from.
+
+(ii) A "Transform sheet" is created to query the "Rotation" table by using `'HLOOKUP'` function and determine who's on shift using `'IF'` and `'Nested IFs'` statements.
 
 To determine who's on duty (scheduled worker/coverage/no one), a new row `"On Duty"` "is created using `"Nested IFs"`based on the hierachy as shown below:
 
 ![image](https://github.com/user-attachments/assets/11bc6ff2-441d-4ccd-9eda-a86e13dd7332)
 
-A date sheet is created to display the dates based on week number. 
+(iii) A date sheet is created to display the dates based on week number. 
 
 `"Index"` and `"Match"` are used to create the summary of the rotation by matching the DATE, SHIFT and ROLE.
 
 Example of code:
 ```
-=INDEX("On Duty" row,MATCH(1,(DATE ='DATE' from 'Transform Sheet')*(SHIFT = 'SHIFT' from 'Transform Sheet')*(ROLE = 'ROLE' from 'Transform Sheet'),0))
+{=INDEX("On Duty" row,MATCH(1,(DATE ='DATE' from 'Transform Sheet')*(SHIFT = 'SHIFT' from 'Transform Sheet')*(ROLE = 'ROLE' from 'Transform Sheet'),0))}
 ```
 
